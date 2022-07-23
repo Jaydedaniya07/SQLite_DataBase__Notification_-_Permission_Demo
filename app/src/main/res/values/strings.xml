@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SQLite_DataBase__Notification_&amp;_Permission_Demo</string>
+
+    <string name="app_name_1">SQLite DataBase, Notification</string>
+    <string name="app_name_2">And</string>
+    <string name="app_name_3">Permission Demo</string>
 </resources>
