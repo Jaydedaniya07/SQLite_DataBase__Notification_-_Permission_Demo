@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".SignUpActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="32dp"
-            android:text="@string/loginAccount"
+            android:text="@string/createNewAccount"
             android:textColor="@color/teal_700"
             android:textSize="24sp" />
 
@@ -54,6 +54,52 @@
                 app:layout_constraintTop_toBottomOf="@+id/userNameSignUpActivity" />
 
             <EditText
+                android:id="@+id/userNumberSignUpActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/userNumber"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userNameValidationSignUpActivity"
+                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/userNumberValidationSignUpActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userNumberSignUpActivity" />
+
+            <EditText
+                android:id="@+id/userEmailSignUpActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/userEmail"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userNumberValidationSignUpActivity"
+                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/userEmailValidationSignUpActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userEmailSignUpActivity" />
+
+            <EditText
                 android:id="@+id/userPassWordSignUpActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,7 +110,7 @@
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userNameValidationSignUpActivity"
+                app:layout_constraintTop_toBottomOf="@+id/userEmailValidationSignUpActivity"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
@@ -76,6 +122,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/userPassWordSignUpActivity" />
 
+            <EditText
+                android:id="@+id/userConfirmPassWordSignUpActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/userConfirmPassWord"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userPassWordValidationSignUpActivity"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/userConfirmPassWordValidationSignUpActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userConfirmPassWordSignUpActivity" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
@@ -83,17 +152,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/submitLoginDetailsBtn" />
+            android:text="@string/createNewAccountDetailsBtn" />
 
         <TextView
             android:id="@+id/loginAccountTextSignUpActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/createNewAccount"
+            android:text="@string/loginAccount"
             android:textColor="@color/purple_200"
             android:textSize="20sp" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,4 +4,20 @@
     <string name="app_name_1">SQLite DataBase, Notification</string>
     <string name="app_name_2">And</string>
     <string name="app_name_3">Permission Demo</string>
+
+    <!--    Login & SignUp Activity -->
+
+    <string name="loginAccount">Login Account</string>
+    <string name="createNewAccount">Create New Account</string>
+    <string name="valid">Valid!</string>
+    <string name="unValid">UnValid!</string>
+    <string name="userName">User Name</string>
+    <string name="userPassword">Password</string>
+    <string name="userNumber">Enter Number</string>
+    <string name="userEmail">Enter Email</string>
+    <string name="userConfirmPassWord">Confirm PassWord</string>
+    <string name="submitLoginDetailsBtn">Submit</string>
+    <string name="createNewAccountDetailsBtn">Create</string>
+
+
 </resources>
