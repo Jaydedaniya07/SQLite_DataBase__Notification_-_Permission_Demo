@@ -32,7 +32,7 @@
             android:layout_margin="20dp">
 
             <EditText
-                android:id="@+id/userNameSignUpActivity"
+                android:id="@+id/userNameUpdateUserDetailsActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -45,16 +45,16 @@
                 tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
-                android:id="@+id/userNameValidationSignUpActivity"
+                android:id="@+id/userNameValidationUpdateUserDetailsActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userNameSignUpActivity" />
+                app:layout_constraintTop_toBottomOf="@+id/userNameUpdateUserDetailsActivity" />
 
             <EditText
-                android:id="@+id/userNumberSignUpActivity"
+                android:id="@+id/userNumberUpdateUserDetailsActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -64,20 +64,20 @@
                 android:inputType="number"
                 android:minHeight="48dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userNameValidationSignUpActivity"
+                app:layout_constraintTop_toBottomOf="@+id/userNameValidationUpdateUserDetailsActivity"
                 tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
-                android:id="@+id/userNumberValidationSignUpActivity"
+                android:id="@+id/userNumberValidationUpdateUserDetailsActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userNumberSignUpActivity" />
+                app:layout_constraintTop_toBottomOf="@+id/userNumberUpdateUserDetailsActivity" />
 
             <EditText
-                android:id="@+id/userEmailSignUpActivity"
+                android:id="@+id/userEmailUpdateUserDetailsActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -87,17 +87,17 @@
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userNumberValidationSignUpActivity"
+                app:layout_constraintTop_toBottomOf="@+id/userNumberValidationUpdateUserDetailsActivity"
                 tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
-                android:id="@+id/userEmailValidationSignUpActivity"
+                android:id="@+id/userEmailValidationUpdateUserDetailsActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userEmailSignUpActivity" />
+                app:layout_constraintTop_toBottomOf="@+id/userEmailUpdateUserDetailsActivity" />
 
             <EditText
                 android:id="@+id/userPassWordSignUpActivity"
@@ -110,7 +110,7 @@
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userEmailValidationSignUpActivity"
+                app:layout_constraintTop_toBottomOf="@+id/userEmailValidationUpdateUserDetailsActivity"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
@@ -148,7 +148,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/createBtnSignUpActivity"
+            android:id="@+id/updateBtnUpdateUserDetailsActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

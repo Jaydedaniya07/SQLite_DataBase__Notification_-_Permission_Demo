@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jaydedaniya.sqlite_database__notification__permission_demo.dbHelper.UserDataHandler;
+
 import java.util.regex.Pattern;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -31,18 +33,18 @@ public class SignUpActivity extends AppCompatActivity {
 
         context = this;
 
-        userName = findViewById(R.id.userNameSignUpActivity);
-        userNumber = findViewById(R.id.userNumberSignUpActivity);
-        userEmail = findViewById(R.id.userEmailSignUpActivity);
+        userName = findViewById(R.id.userNameUpdateUserDetailsActivity);
+        userNumber = findViewById(R.id.userNumberUpdateUserDetailsActivity);
+        userEmail = findViewById(R.id.userEmailUpdateUserDetailsActivity);
         userPassWord = findViewById(R.id.userPassWordSignUpActivity);
         userConfirmPassWord = findViewById(R.id.userConfirmPassWordSignUpActivity);
-        userNameValidation = findViewById(R.id.userNameValidationSignUpActivity);
-        userNumberValidation = findViewById(R.id.userNumberValidationSignUpActivity);
-        userEmailValidation = findViewById(R.id.userEmailValidationSignUpActivity);
+        userNameValidation = findViewById(R.id.userNameValidationUpdateUserDetailsActivity);
+        userNumberValidation = findViewById(R.id.userNumberValidationUpdateUserDetailsActivity);
+        userEmailValidation = findViewById(R.id.userEmailValidationUpdateUserDetailsActivity);
         userPassWordValidation = findViewById(R.id.userPassWordValidationSignUpActivity);
         userConfirmPassWordValidation = findViewById(R.id.userConfirmPassWordValidationSignUpActivity);
         loginAccountText = findViewById(R.id.loginAccountTextSignUpActivity);
-        createBtn = findViewById(R.id.createBtnSignUpActivity);
+        createBtn = findViewById(R.id.updateBtnUpdateUserDetailsActivity);
 
 //        User Name Validation Checked
         TextWatcher userNameTextWatcher = new TextWatcher() {
@@ -210,6 +212,22 @@ public class SignUpActivity extends AppCompatActivity {
                 String confirmPass = userConfirmPassWordValidation.getText().toString();
 
                 if (name.equals("Valid!") && number.equals("Valid!") && email.equals("Valid!") && pass.equals("Valid!") && confirmPass.equals("Valid!")) {
+
+                    String userNameText = userName.getText().toString();
+                    String userNumberText = userNumber.getText().toString();
+                    String userEmailText = userEmail.getText().toString();
+                    String userPassText = userPassWord.getText().toString();
+
+                    UserDataHandler dataHandler = new UserDataHandler(context);
+                    UserDataClass userDataClass = new UserDataClass();
+
+                    userDataClass.setUserName(userNameText);
+                    userDataClass.setUserNumber(userNumberText);
+                    userDataClass.setUserEmail(userEmailText);
+                    userDataClass.setUserPass(userPassText);
+
+                    dataHandler.saveUserDetails(userDataClass);
+
                     Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish();

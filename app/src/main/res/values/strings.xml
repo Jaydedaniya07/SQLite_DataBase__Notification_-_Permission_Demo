@@ -19,5 +19,17 @@
     <string name="submitLoginDetailsBtn">Submit</string>
     <string name="createNewAccountDetailsBtn">Create</string>
 
+    <!--    Single User Activity -->
+
+    <string name="singleActivityUserName">User Name \t:\t</string>
+    <string name="singleActivityUserNumber">User Number \t:\t</string>
+    <string name="singleActivityUserEmail">User Email \t:\t</string>
+    <string name="singleActivityUserEdit">Edit</string>
+    <string name="singleActivityUserDelete">Delete</string>
+
+<!--        Update User Details -->
+
+    <string name="updateDetails">Update Details</string>
+    <string name="updateBtn">Update</string>
 
 </resources>

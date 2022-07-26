@@ -14,6 +14,12 @@
         android:theme="@style/Theme.SQLite_DataBase__Notification__Permission_Demo"
         tools:targetApi="31">
         <activity
+            android:name=".UpdateUserDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SingleUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity

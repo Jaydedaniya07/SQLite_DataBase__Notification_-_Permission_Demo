@@ -26,73 +26,72 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         context = this;
 
-        userName = findViewById(R.id.userNameSignUpActivity);
+        userName = findViewById(R.id.userNameUpdateUserDetailsActivity);
         userPassWord = findViewById(R.id.userPassWordSignUpActivity);
-        userNameValidation = findViewById(R.id.userNameValidationSignUpActivity);
+        userNameValidation = findViewById(R.id.userNameValidationUpdateUserDetailsActivity);
         userPassWordValidation = findViewById(R.id.userPassWordValidationSignUpActivity);
         createNewAccount = findViewById(R.id.loginAccountTextSignUpActivity);
-        submitBtn = findViewById(R.id.createBtnSignUpActivity);
+        submitBtn = findViewById(R.id.updateBtnUpdateUserDetailsActivity);
 
 //        User Name Validation Checked
-        TextWatcher userNameTextWatcher = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String name = userName.getText().toString();
-                if (name.isEmpty()) {
-                    userNameValidation.setVisibility(View.GONE);
-                } else if (name.length() < 6) {
-                    userNameValidation.setVisibility(View.VISIBLE);
-                    userNameValidation.setText(R.string.unValid);
-                    userNameValidation.setTextColor(getResources().getColor(R.color.red));
-                } else {
-                    userNameValidation.setVisibility(View.VISIBLE);
-                    userNameValidation.setText(R.string.valid);
-                    userNameValidation.setTextColor(getResources().getColor(R.color.blue));
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        };
-        userName.addTextChangedListener(userNameTextWatcher);
+//        TextWatcher userNameTextWatcher = new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                String name = userName.getText().toString();
+//                if (name.isEmpty()) {
+//                    userNameValidation.setVisibility(View.GONE);
+//                } else if (name.length() < 6) {
+//                    userNameValidation.setVisibility(View.VISIBLE);
+//                    userNameValidation.setText(R.string.unValid);
+//                    userNameValidation.setTextColor(getResources().getColor(R.color.red));
+//                } else {
+//                    userNameValidation.setVisibility(View.VISIBLE);
+//                    userNameValidation.setText(R.string.valid);
+//                    userNameValidation.setTextColor(getResources().getColor(R.color.blue));
+//                }
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        };
+//        userName.addTextChangedListener(userNameTextWatcher);
 
 //        User PassWord Validation Checked
-        TextWatcher userPassWordTextWatcher = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String pass = userPassWord.getText().toString();
-                if (pass.isEmpty()) {
-                    userPassWordValidation.setVisibility(View.GONE);
-                } else if (Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,20}$", pass)) {
-                    userPassWordValidation.setVisibility(View.VISIBLE);
-                    userPassWordValidation.setText(R.string.valid);
-                    userPassWordValidation.setTextColor(getResources().getColor(R.color.blue));
-                } else {
-                    userPassWordValidation.setVisibility(View.VISIBLE);
-                    userPassWordValidation.setText(R.string.unValid);
-                    userPassWordValidation.setTextColor(getResources().getColor(R.color.red));
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-            }
-        };
-        userPassWord.addTextChangedListener(userPassWordTextWatcher);
+//        TextWatcher userPassWordTextWatcher = new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                String pass = userPassWord.getText().toString();
+//                if (pass.isEmpty()) {
+//                    userPassWordValidation.setVisibility(View.GONE);
+//                } else if (Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,20}$", pass)) {
+//                    userPassWordValidation.setVisibility(View.VISIBLE);
+//                    userPassWordValidation.setText(R.string.valid);
+//                    userPassWordValidation.setTextColor(getResources().getColor(R.color.blue));
+//                } else {
+//                    userPassWordValidation.setVisibility(View.VISIBLE);
+//                    userPassWordValidation.setText(R.string.unValid);
+//                    userPassWordValidation.setTextColor(getResources().getColor(R.color.red));
+//                }
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//            }
+//        };
+//        userPassWord.addTextChangedListener(userPassWordTextWatcher);
 
 //       OnClick Query to Submit Button
         submitBtn.setOnClickListener(new View.OnClickListener() {

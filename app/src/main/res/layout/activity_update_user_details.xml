@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".UpdateUserDetails">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="32dp"
-            android:text="@string/loginAccount"
+            android:text="@string/updateDetails"
             android:textColor="@color/teal_700"
             android:textSize="24sp" />
 
@@ -54,27 +54,50 @@
                 app:layout_constraintTop_toBottomOf="@+id/userNameUpdateUserDetailsActivity" />
 
             <EditText
-                android:id="@+id/userPassWordSignUpActivity"
+                android:id="@+id/userNumberUpdateUserDetailsActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="@string/userPassword"
+                android:hint="@string/userNumber"
                 android:importantForAutofill="no"
-                android:inputType="textPassword"
+                android:inputType="number"
                 android:minHeight="48dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/userNameValidationUpdateUserDetailsActivity"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
-                android:id="@+id/userPassWordValidationSignUpActivity"
+                android:id="@+id/userNumberValidationUpdateUserDetailsActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userPassWordSignUpActivity" />
+                app:layout_constraintTop_toBottomOf="@+id/userNumberUpdateUserDetailsActivity" />
+
+            <EditText
+                android:id="@+id/userEmailUpdateUserDetailsActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/userEmail"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userNumberValidationUpdateUserDetailsActivity"
+                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/userEmailValidationUpdateUserDetailsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userEmailUpdateUserDetailsActivity" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -83,16 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/submitLoginDetailsBtn" />
-
-        <TextView
-            android:id="@+id/loginAccountTextSignUpActivity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/createNewAccount"
-            android:textColor="@color/purple_200"
-            android:textSize="20sp" />
+            android:text="@string/updateBtn" />
 
     </LinearLayout>
 
