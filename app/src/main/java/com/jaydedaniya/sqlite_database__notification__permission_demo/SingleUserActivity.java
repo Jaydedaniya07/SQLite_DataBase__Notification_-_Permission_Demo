@@ -35,7 +35,7 @@ public class SingleUserActivity extends AppCompatActivity {
         if(intent.getSerializableExtra("userDetails")!= null){
             userName.setText(userDataClass.getUserName());
             userNumber.setText(userDataClass.getUserNumber());
-            userName.setText(userDataClass.getUserEmail());
+            userEmail.setText(userDataClass.getUserEmail());
         }
 
         editBtn.setOnClickListener(new View.OnClickListener() {
